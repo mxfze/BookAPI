@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A simple book API created using [NestJS](https://github.com/nestjs/nest) .
 
 ## Installation
 
@@ -45,29 +45,39 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Requests
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Get all books [GET]
+> http://localhost:3000/books/
+```
+```bash
+# Get book by ID [GET]
+> http://localhost:3000/books/{id}
 ```
 
-## Support
+```bash
+# Add a book [POST]
+> http://localhost:3000/books/
+  Body Format:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  {
+    "book": "book_name"
+  }
+```
 
-## Stay in touch
+```bash
+# Update a book [PUT]
+> http://localhost:3000/books/{id}
+  Body Format:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+  {
+    "book": "book_name"
+  }
+```
 
-## License
+```bash
+# Delete a book [DELETE]
+> http://localhost:3000/books/{id}
+```
 
-Nest is [MIT licensed](LICENSE).
